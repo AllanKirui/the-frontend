@@ -1,0 +1,5 @@
+// A function to change units from px to rem
+// takes in units in px and the default size for html 16px
+@function toRem($pixels, $context: 16) {
+  @return ($pixels / $context) * 1rem;
+}
