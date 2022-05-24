@@ -1,0 +1,13 @@
+.header {
+  #{&}__tagline,
+  #{&}__title {
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+  #{&}__tagline {
+    font-size: toRem(18);
+  }
+  #{&}__title {
+    font-size: toRem(88);
+  }
+}
