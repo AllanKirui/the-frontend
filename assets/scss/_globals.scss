@@ -25,3 +25,14 @@ h3,
 p {
   margin: 0;
 }
+
+a,
+a:visited,
+a:hover {
+  text-decoration: none;
+}
+
+.container {
+  max-width: toRem(1120);
+  margin: 0 auto;
+}
