@@ -12,7 +12,7 @@ html {
 
 body {
   margin: 0;
-  padding: 0;
+  padding: toRem(40) 0;
   font-family: "PT Serif", sans-serif;
   background-color: $color-old-lace;
   color: $color-rich-black;
@@ -24,6 +24,7 @@ h2,
 h3,
 p {
   margin: 0;
+  line-height: 1;
 }
 
 a,
@@ -35,4 +36,24 @@ a:hover {
 .container {
   max-width: toRem(1120);
   margin: 0 auto;
+}
+
+.flex {
+  display: flex;
+
+  &-jc-sb {
+    justify-content: space-between;
+  }
+
+  &-jc-c {
+    justify-content: center;
+  }
+
+  &-ai-c {
+    align-items: center;
+  }
+
+  &-fd-c {
+    flex-direction: column;
+  }
 }
