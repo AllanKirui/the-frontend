@@ -12,7 +12,7 @@ html {
 
 body {
   margin: 0;
-  padding: 0;
+  padding: 2.5rem 0;
   font-family: "PT Serif", sans-serif;
   background-color: #fcf4e3;
   color: #031213;
@@ -24,5 +24,76 @@ h2,
 h3,
 p {
   margin: 0;
+  line-height: 1;
+}
+
+a,
+a:visited,
+a:hover {
+  text-decoration: none;
+}
+
+.container {
+  max-width: 70rem;
+  margin: 0 auto;
+}
+
+.flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.flex-jc-sb {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.flex-jc-c {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.flex-ai-c {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.flex-fd-c {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.header {
+  border-top: 5px solid #031213;
+  border-bottom: 5px solid #031213;
+}
+
+.header .wrapper {
+  padding: 1.875rem 0;
+}
+
+.header .header__tagline,
+.header .header__title {
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.header .header__tagline,
+.header .header__meta {
+  font-size: 1rem;
+}
+
+.header .header__title {
+  font-size: 5.5rem;
+}
+
+.header .header__meta-link {
+  color: inherit;
 }
 /*# sourceMappingURL=style.css.map */
