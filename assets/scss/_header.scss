@@ -1,13 +1,23 @@
 .header {
+  border-top: 5px solid $color-rich-black;
+  border-bottom: 5px solid $color-rich-black;
+
+  & .wrapper {
+    padding: toRem(30) 0;
+  }
   #{&}__tagline,
   #{&}__title {
     font-weight: bold;
     text-transform: uppercase;
   }
-  #{&}__tagline {
-    font-size: toRem(18);
+  #{&}__tagline,
+  #{&}__meta {
+    font-size: toRem(16);
   }
   #{&}__title {
     font-size: toRem(88);
+  }
+  #{&}__meta-link {
+    color: inherit;
   }
 }
