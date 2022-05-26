@@ -15,7 +15,7 @@ body {
   padding: 2.5rem 0;
   font-family: "PT Serif", sans-serif;
   background-color: #fcf4e3;
-  color: #031213;
+  color: #031112;
   overflow-x: hidden;
 }
 
@@ -70,8 +70,8 @@ a:hover {
 }
 
 .header {
-  border-top: 5px solid #031213;
-  border-bottom: 5px solid #031213;
+  border-top: 5px solid #031112;
+  border-bottom: 5px solid #031112;
 }
 
 .header .wrapper {
