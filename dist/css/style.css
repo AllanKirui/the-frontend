@@ -103,7 +103,7 @@ a:hover {
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
   text-align: center;
-  font-size: 1rem;
+  font-size: 0.875rem;
   font-weight: bold;
 }
 
@@ -153,5 +153,75 @@ a:hover {
 
 .header .header__meta-link {
   color: inherit;
+}
+
+.header .animate-enter {
+  -webkit-animation: mapEnter 0.4s ease-in forwards;
+          animation: mapEnter 0.4s ease-in forwards;
+}
+
+.header .animate-leave {
+  -webkit-animation: mapLeave 0.4s ease-out forwards;
+          animation: mapLeave 0.4s ease-out forwards;
+}
+
+@-webkit-keyframes mapEnter {
+  from {
+    left: -50%;
+    opacity: 0;
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+  to {
+    left: 0;
+    opacity: 1;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@keyframes mapEnter {
+  from {
+    left: -50%;
+    opacity: 0;
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+  to {
+    left: 0;
+    opacity: 1;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@-webkit-keyframes mapLeave {
+  from {
+    left: 0;
+    opacity: 1;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  to {
+    left: -50%;
+    opacity: 0;
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+}
+
+@keyframes mapLeave {
+  from {
+    left: 0;
+    opacity: 1;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  to {
+    left: -50%;
+    opacity: 0;
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
 }
 /*# sourceMappingURL=style.css.map */
