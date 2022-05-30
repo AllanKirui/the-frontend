@@ -1,6 +1,7 @@
 .header {
   border-top: 5px solid $color-rich-black;
   border-bottom: 5px solid $color-rich-black;
+  margin-bottom: toRem(10);
 
   & .wrapper {
     position: relative;
