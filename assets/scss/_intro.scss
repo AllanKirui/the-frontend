@@ -1,0 +1,39 @@
+.intro {
+  color: $color-old-lace;
+  background-color: $color-rich-black;
+
+  & .wrapper {
+    position: relative;
+  }
+
+  #{&}__text {
+    padding: toRem(20) 0;
+
+    &-title {
+      padding: 0 toRem(16) toRem(16) toRem(18);
+      font-size: toRem(32);
+      text-transform: uppercase;
+      width: 80%;
+    }
+
+    & .divider {
+      display: block;
+      width: calc(100%);
+      height: 2px;
+      background-color: $color-old-lace;
+    }
+
+    &-marquee {
+      padding: toRem(16) toRem(16) 0 toRem(18);
+      font-size: toRem(18);
+      width: 72%;
+      letter-spacing: 0.5px;
+    }
+  }
+
+  #{&}__logo {
+    position: absolute;
+    top: -30px;
+    right: 30px;
+  }
+}
