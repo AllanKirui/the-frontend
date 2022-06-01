@@ -7,7 +7,7 @@
   }
 
   #{&}__text {
-    padding: toRem(20) 0;
+    padding-top: toRem(20);
 
     &-title {
       padding: 0 toRem(16) toRem(16) toRem(18);
@@ -19,15 +19,48 @@
     & .divider {
       display: block;
       width: calc(100%);
-      height: 2px;
+      height: 2.5px;
       background-color: $color-old-lace;
     }
 
     &-marquee {
-      padding: toRem(16) toRem(16) 0 toRem(18);
+      position: relative;
+      left: 18px;
+      margin: toRem(20) 0 0;
+      width: 70%;
+      height: 2rem;
       font-size: toRem(18);
-      width: 72%;
       letter-spacing: 0.5px;
+      overflow: hidden;
+
+      // start of marquee code (plus overflow above)
+      & > * {
+        position: absolute;
+        white-space: nowrap;
+        animation: marquee 15s linear 0s infinite;
+      }
+
+      > *:hover {
+        animation-play-state: paused;
+      }
+      // end of marquee code
+
+      & .dot {
+        display: inline-block;
+        transform: translateY(-40%);
+        width: toRem(8);
+        height: toRem(8);
+        border-radius: 50%;
+        background-color: $color-mint;
+      }
+
+      & a {
+        color: $color-mint;
+
+        &:hover {
+          color: $color-medium-aquamarine;
+        }
+      }
     }
   }
 
@@ -35,5 +68,16 @@
     position: absolute;
     top: -30px;
     right: 30px;
+  }
+
+  @keyframes marquee {
+    0% {
+      left: 100%;
+      transform: translateX(0%);
+    }
+    100% {
+      left: 0%;
+      transform: translateX(-100%);
+    }
   }
 }
