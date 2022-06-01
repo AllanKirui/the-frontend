@@ -1,4 +1,4 @@
-// step 1: add logic to show the date
+// block 1: add logic to show the date
 // - - - - - - - - - - - - - - - - - - -
 const days = [
   "Sunday",
@@ -39,7 +39,7 @@ const setDate = () => {
 
 setDate();
 
-// step 2: add logic to animate the map image
+// block 2: add logic to animate the map image
 // - - - - - - - - - - - - - - - - - - -
 const imageWrapper = document.querySelector(".wrapper__image");
 const mapOutline = document.querySelector(".map-outline");
@@ -66,4 +66,20 @@ imageWrapper.addEventListener("mouseleave", () => {
       mapOutline.classList.add("animate-leave");
     }
   }, 200);
+});
+
+// block 3: add logic to style "learn more" links
+// - - - - - - - - - - - - - - - - - - -
+const link = document.getElementById("link-container");
+const chevronContainer = document.getElementById("chevron-wrapper");
+const chevronBody = document.getElementById("chevron-body");
+
+link.addEventListener("mouseenter", () => {
+  chevronContainer.classList.add("active");
+  chevronBody.classList.add("active");
+});
+
+link.addEventListener("mouseleave", () => {
+  chevronContainer.classList.remove("active");
+  chevronBody.classList.remove("active");
 });
