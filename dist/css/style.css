@@ -80,6 +80,7 @@ a:hover {
 }
 
 .heading-20 {
+  text-align: center;
   font-size: 1.25rem;
 }
 
@@ -409,5 +410,56 @@ p.space-bottom {
     -webkit-transform: translateX(-100%);
             transform: translateX(-100%);
   }
+}
+
+.hero {
+  margin-top: 2rem;
+}
+
+.hero h2,
+.hero h3,
+.hero p {
+  line-height: 1.2;
+}
+
+.hero .wrapper {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[5];
+      grid-template-columns: repeat(5, 1fr);
+  -ms-grid-rows: (1fr)[3];
+      grid-template-rows: repeat(3, 1fr);
+  gap: 0.625rem;
+}
+
+.hero .sideline-1 {
+  margin-bottom: 0.875rem;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 1;
+  grid-column: 1 / 2;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
+  grid-row: 1 / 2;
+}
+
+.hero__headline {
+  padding-left: 1.125rem;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 4;
+  grid-column: 2 / 6;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
+  grid-row: 1 / 2;
+  font-size: 3rem;
+}
+
+.hero .sideline-2 {
+  margin-bottom: 0.875rem;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 1;
+  grid-column: 1 / 2;
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 1;
+  grid-row: 2 / 3;
 }
 /*# sourceMappingURL=style.css.map */
