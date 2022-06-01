@@ -1,0 +1,35 @@
+.hero {
+  margin-top: 2rem;
+
+  h2,
+  h3,
+  p {
+    line-height: 1.2;
+  }
+
+  .wrapper {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: toRem(10);
+  }
+
+  .sideline-1 {
+    margin-bottom: toRem(14);
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+  }
+
+  &__headline {
+    padding-left: toRem(18);
+    grid-column: 2 / 6;
+    grid-row: 1 / 2;
+    font-size: toRem(48);
+  }
+
+  .sideline-2 {
+    margin-bottom: toRem(14);
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+  }
+}
