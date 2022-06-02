@@ -70,16 +70,19 @@ imageWrapper.addEventListener("mouseleave", () => {
 
 // block 3: add logic to style "learn more" links
 // - - - - - - - - - - - - - - - - - - -
-const link = document.getElementById("link-container");
-const chevronContainer = document.getElementById("chevron-wrapper");
-const chevronBody = document.getElementById("chevron-body");
+const linkElements = document.getElementsByClassName("link-container");
 
-link.addEventListener("mouseenter", () => {
-  chevronContainer.classList.add("active");
-  chevronBody.classList.add("active");
-});
+function addHoverClass() {
+  this.querySelector(".chevron-wrapper").classList.add("active");
+  this.querySelector(".chevron-body").classList.add("active");
+}
 
-link.addEventListener("mouseleave", () => {
-  chevronContainer.classList.remove("active");
-  chevronBody.classList.remove("active");
-});
+function removeHoverClass() {
+  this.querySelector(".chevron-wrapper").classList.remove("active");
+  this.querySelector(".chevron-body").classList.remove("active");
+}
+
+for (let i = 0; i < linkElements.length; i++) {
+  linkElements[i].addEventListener("mouseover", addHoverClass);
+  linkElements[i].addEventListener("mouseleave", removeHoverClass);
+}
