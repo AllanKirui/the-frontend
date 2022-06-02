@@ -33,6 +33,11 @@ a:hover {
   text-decoration: none;
 }
 
+ul {
+  padding: 0;
+  list-style-type: none;
+}
+
 .container {
   max-width: toRem(1120);
   margin: 0 auto;
