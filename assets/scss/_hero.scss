@@ -1,35 +1,135 @@
 .hero {
   margin-top: 2rem;
 
+  .wrapper {
+    border-bottom: 5px solid $color-rich-black;
+  }
+
   h2,
   h3,
   p {
     line-height: 1.2;
   }
 
-  .wrapper {
+  & .wrapper {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
-    grid-template-rows: repeat(3, 1fr);
+    grid-template-rows: repeat(3, auto);
     gap: toRem(10);
   }
 
-  .sideline-1 {
+  & .sideline-1 {
     margin-bottom: toRem(14);
-    grid-column: 1 / 2;
-    grid-row: 1 / 2;
+    grid-column: 1;
+    grid-row: 1;
   }
 
   &__headline {
     padding-left: toRem(18);
     grid-column: 2 / 6;
-    grid-row: 1 / 2;
+    grid-row: 1;
     font-size: toRem(48);
   }
 
-  .sideline-2 {
+  & .sideline-2 {
     margin-bottom: toRem(14);
-    grid-column: 1 / 2;
+    grid-column: 1;
     grid-row: 2 / 3;
+
+    & .avatar-wrapper {
+      display: grid;
+      grid-template-columns: 1fr 75px;
+      grid-template-rows: 1fr;
+
+      & p {
+        grid-row: 1;
+        grid-column: 1;
+      }
+
+      & .avatar {
+        width: toRem(65);
+        height: toRem(65);
+        max-width: 100%;
+        grid-row: 1;
+        grid-column: 2;
+      }
+    }
+  }
+
+  &__facts {
+    grid-column: 2;
+    grid-row: 2;
+
+    & .heading-20 {
+      text-align: left;
+      text-transform: uppercase;
+    }
+
+    &-wrapper {
+      & .fact:not(:last-child) {
+        margin-bottom: toRem(10);
+      }
+    }
+  }
+
+  &__quotes {
+    grid-column: 1;
+    grid-row: 3;
+
+    & .heading-20 {
+      margin-bottom: toRem(30);
+    }
+
+    &-wrapper {
+      text-align: center;
+      font-size: toRem(14);
+
+      & .quote {
+        padding: 0 toRem(10);
+        font-style: italic;
+      }
+
+      & .author {
+        font-weight: bold;
+      }
+    }
+  }
+
+  &__css-corner {
+    grid-row: 3;
+    grid-column: 2 / span 4;
+
+    & .heading-20 {
+      text-transform: uppercase;
+    }
+
+    &-wrapper {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-template-rows: 1fr;
+
+      & .info {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1em;
+        grid-row: 1;
+      }
+
+      & .info-1 {
+        grid-column: 1;
+      }
+
+      & .info-2 {
+        grid-column: 2;
+      }
+
+      & .info-3 {
+        grid-column: 3;
+      }
+
+      & .info-4 {
+        grid-column: 4;
+      }
+    }
   }
 }
