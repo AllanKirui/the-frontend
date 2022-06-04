@@ -1,10 +1,6 @@
 .hero {
   margin-top: 2rem;
 
-  .wrapper {
-    border-bottom: 5px solid $color-rich-black;
-  }
-
   h2,
   h3,
   p {
@@ -16,6 +12,7 @@
     grid-template-columns: repeat(5, 1fr);
     grid-template-rows: repeat(3, auto);
     gap: toRem(10);
+    border-bottom: 5px solid $color-rich-black;
   }
 
   & .sideline-1 {
@@ -81,8 +78,11 @@
     }
 
     &-wrapper {
+      position: relative;
       text-align: center;
       font-size: toRem(14);
+      // opacity: 0;
+      animation: slideFade 8s ease-in infinite;
 
       & .quote {
         padding: 0 toRem(10);
@@ -90,7 +90,28 @@
       }
 
       & .author {
+        margin-bottom: toRem(14);
         font-weight: bold;
+      }
+
+      & .progress-bar {
+        margin-bottom: toRem(5);
+        width: 100%;
+        transform-origin: center;
+        background-color: $color-rich-black;
+
+        &.bar-1 {
+          height: 1px;
+          animation: progressBarGrow 7s linear infinite alternate;
+        }
+
+        &.bar-2 {
+          position: absolute;
+          left: 50%;
+          transform: translateX(-50%);
+          height: 1px;
+          animation: progressBarShrink 7s linear infinite alternate;
+        }
       }
     }
   }
@@ -130,6 +151,20 @@
       & .info-4 {
         grid-column: 4;
       }
+    }
+  }
+
+  @keyframes progressBarGrow {
+    0% {
+      transform: scaleX(0);
+    }
+  }
+  @keyframes progressBarShrink {
+    // 0% {
+    //   width: 80%;
+    // }
+    100% {
+      width: 0;
     }
   }
 }
