@@ -22,6 +22,7 @@ body {
 h1,
 h2,
 h3,
+h4,
 p {
   margin: 0;
   line-height: 1;
@@ -421,10 +422,6 @@ p.space-bottom {
   margin-top: 2rem;
 }
 
-.hero .wrapper {
-  border-bottom: 5px solid #031011;
-}
-
 .hero h2,
 .hero h3,
 .hero p {
@@ -439,6 +436,7 @@ p.space-bottom {
   -ms-grid-rows: (auto)[3];
       grid-template-rows: repeat(3, auto);
   gap: 0.625rem;
+  border-bottom: 5px solid #031011;
 }
 
 .hero .sideline-1 {
@@ -522,8 +520,11 @@ p.space-bottom {
 }
 
 .hero__quotes-wrapper {
+  position: relative;
   text-align: center;
   font-size: 0.875rem;
+  -webkit-animation: slideFade 8s ease-in infinite;
+          animation: slideFade 8s ease-in infinite;
 }
 
 .hero__quotes-wrapper .quote {
@@ -532,7 +533,32 @@ p.space-bottom {
 }
 
 .hero__quotes-wrapper .author {
+  margin-bottom: 0.875rem;
   font-weight: bold;
+}
+
+.hero__quotes-wrapper .progress-bar {
+  margin-bottom: 0.3125rem;
+  width: 100%;
+  -webkit-transform-origin: center;
+          transform-origin: center;
+  background-color: #031011;
+}
+
+.hero__quotes-wrapper .progress-bar.bar-1 {
+  height: 1px;
+  -webkit-animation: progressBarGrow 7s linear infinite alternate;
+          animation: progressBarGrow 7s linear infinite alternate;
+}
+
+.hero__quotes-wrapper .progress-bar.bar-2 {
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  height: 1px;
+  -webkit-animation: progressBarShrink 7s linear infinite alternate;
+          animation: progressBarShrink 7s linear infinite alternate;
 }
 
 .hero__css-corner {
@@ -585,5 +611,31 @@ p.space-bottom {
 .hero__css-corner-wrapper .info-4 {
   -ms-grid-column: 4;
   grid-column: 4;
+}
+
+@-webkit-keyframes progressBarGrow {
+  0% {
+    -webkit-transform: scaleX(0);
+            transform: scaleX(0);
+  }
+}
+
+@keyframes progressBarGrow {
+  0% {
+    -webkit-transform: scaleX(0);
+            transform: scaleX(0);
+  }
+}
+
+@-webkit-keyframes progressBarShrink {
+  100% {
+    width: 0;
+  }
+}
+
+@keyframes progressBarShrink {
+  100% {
+    width: 0;
+  }
 }
 /*# sourceMappingURL=style.css.map */
