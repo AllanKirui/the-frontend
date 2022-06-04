@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>The Frontend | Making Web Dev Fun</title>
     <link rel="stylesheet" href="dist/css/style.css" />
+    <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+    <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js" defer></script>
     <script src="assets/js/script.js" defer></script>
   </head>
   <body>
@@ -190,8 +192,10 @@
         <div class="hero__quotes">
           <h2 class="heading-20 underlined">Quotes of The Day</h2>
           <div class="hero__quotes-wrapper">
-            <p class="quote space-bottom">You can never understand everything but you should push yourself to understand the system.</p>
-            <p class="author">Ryan Dahl</p>
+            <p id="quote" class="quote space-bottom">You can never understand everything but you should push yourself to understand the system.</p>
+            <h4 id="author" class="author">Ryan Dahl</h4>
+            <div class="progress-bar bar-1"></div>
+            <div class="progress-bar bar-2"></div>
           </div>
         </div>
 
