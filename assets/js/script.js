@@ -86,3 +86,50 @@ for (let i = 0; i < linkElements.length; i++) {
   linkElements[i].addEventListener("mouseover", addHoverClass);
   linkElements[i].addEventListener("mouseleave", removeHoverClass);
 }
+
+// block 4: add logic to switch between the available quotes
+// - - - - - - - - - - - - - - - - - - -
+const quoteEl = document.getElementById("quote");
+const authorEl = document.getElementById("author");
+const quotesDB = [
+  {
+    author: "Ryan Dahl",
+    quote:
+      "You can never understand everything but you should push yourself to understand the system.",
+  },
+  {
+    author: "Henry David Thoreau",
+    quote:
+      "Go confidently in the direction of your dreams. Live the life you've imagined.",
+  },
+  {
+    author: "Elon Musk",
+    quote:
+      "When something is important enough, you do it even if the odds are not in your favor.",
+  },
+  {
+    author: "Codedad",
+    quote:
+      "You can learn and achieve anything if you are consistent. Being consistent will turn the unnatural feeling of writing code into something natural.",
+  },
+  {
+    author: "Chris Sean",
+    quote:
+      "We are not born with potential, we show potential through our hard work.",
+  },
+];
+
+let index = 1;
+const updateQuotes = () => {
+  const { author, quote } = quotesDB[index];
+  quoteEl.textContent = quote;
+  authorEl.textContent = author;
+  index++;
+
+  // restart the quotes slider when the last quote is reached
+  if (index > quotesDB.length - 1) {
+    index = 0;
+  }
+};
+
+setInterval(updateQuotes, 7000);
