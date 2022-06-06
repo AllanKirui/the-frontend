@@ -457,6 +457,25 @@ p.space-bottom {
   font-size: 3rem;
 }
 
+.hero__image {
+  -ms-grid-column: 3;
+  -ms-grid-column-span: 3;
+  grid-column: 3 / 6;
+  -ms-grid-row: 2;
+  grid-row: 2;
+  -ms-grid-column-align: center;
+      justify-self: center;
+  text-align: center;
+}
+
+.hero__image img {
+  width: 36.25rem;
+  max-width: 100%;
+  border-radius: 10px;
+  -webkit-box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+          box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
+
 .hero .sideline-2 {
   margin-bottom: 0.875rem;
   -ms-grid-column: 1;
@@ -523,8 +542,6 @@ p.space-bottom {
   position: relative;
   text-align: center;
   font-size: 0.875rem;
-  -webkit-animation: slideFade 8s ease-in infinite;
-          animation: slideFade 8s ease-in infinite;
 }
 
 .hero__quotes-wrapper .quote {
