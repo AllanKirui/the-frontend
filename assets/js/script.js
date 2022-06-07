@@ -133,3 +133,28 @@ const updateQuotes = () => {
 };
 
 setInterval(updateQuotes, 7000);
+
+// block 5: add logic to copy color code on click
+// - - - - - - - - - - - - - - - - - - -
+const hexagons = document.querySelectorAll(".hexagon");
+
+hexagons.forEach((hexagon) => {
+  hexagon.addEventListener("click", () => {
+    let colorValueEl = hexagon.querySelector(".color-text .color-value");
+    let color = colorValueEl.textContent.trim();
+
+    // check if the Navigator object is supported
+    if (!navigator) {
+      alert("Please copy color text manually!");
+      return;
+    }
+
+    // get the copied text from Navigator
+    navigator.clipboard.writeText(color);
+    colorValueEl.ariaLabel = "copied! 😉";
+
+    setTimeout(() => {
+      colorValueEl.ariaLabel = "click to copy";
+    }, 1000);
+  });
+});
