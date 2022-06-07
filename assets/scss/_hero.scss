@@ -53,6 +53,7 @@
       display: grid;
       grid-template-columns: 1fr 75px;
       grid-template-rows: 1fr;
+      margin-bottom: toRem(10);
 
       & p {
         grid-row: 1;
