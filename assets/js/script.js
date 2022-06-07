@@ -93,6 +93,11 @@ const quoteEl = document.getElementById("quote");
 const authorEl = document.getElementById("author");
 const quotesDB = [
   {
+    author: "Codedad",
+    quote:
+      "You can learn and achieve anything if you are consistent. Being consistent will turn the unnatural feeling of writing code into something natural.",
+  },
+  {
     author: "Ryan Dahl",
     quote:
       "You can never understand everything but you should push yourself to understand the system.",
@@ -106,11 +111,6 @@ const quotesDB = [
     author: "Elon Musk",
     quote:
       "When something is important enough, you do it even if the odds are not in your favor.",
-  },
-  {
-    author: "Codedad",
-    quote:
-      "You can learn and achieve anything if you are consistent. Being consistent will turn the unnatural feeling of writing code into something natural.",
   },
   {
     author: "Chris Sean",
