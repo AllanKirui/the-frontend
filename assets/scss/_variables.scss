@@ -3,3 +3,9 @@ $color-old-lace: hsl(41, 81%, 94%);
 $color-rich-black: hsl(184, 71%, 4%);
 $color-mint: hsl(154, 48%, 49%);
 $color-medium-aquamarine: hsl(154, 47%, 64%);
+
+// hexagon variables
+$s: 100px; // size
+$m: 4px; // margin
+$f: calc(1.732 * #{$s} + 4 * #{$m} - 1px);
+$zero: 0;
