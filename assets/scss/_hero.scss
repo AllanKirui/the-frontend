@@ -89,6 +89,7 @@
   &__quotes {
     grid-column: 1;
     grid-row: 3;
+    background: url("../../assets/images/quote.png") no-repeat 50% 20%;
 
     & .heading-20 {
       margin-bottom: toRem(30);
@@ -153,6 +154,9 @@
 
       & .info-1 {
         grid-column: 1;
+        background: url("../../assets/images/left-bracket.png") no-repeat left
+          center;
+        background-size: 50px;
       }
 
       & .info-2 {
@@ -165,6 +169,9 @@
 
       & .info-4 {
         grid-column: 4;
+        background: url("../../assets/images/right-bracket.png") no-repeat right
+          center;
+        background-size: 50px;
       }
     }
   }
