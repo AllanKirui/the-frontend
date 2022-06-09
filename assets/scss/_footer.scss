@@ -98,7 +98,8 @@
       }
     }
 
-    & .link-container {
+    & .link {
+      width: fit-content;
       margin-top: toRem(30);
     }
   }
@@ -126,7 +127,7 @@
       color: $color-old-lace;
 
       & p {
-        font-size: toRem(16);
+        font-size: toRem(14);
         font-style: italic;
         text-align: center;
         letter-spacing: 0.5px;
