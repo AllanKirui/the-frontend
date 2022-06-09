@@ -1,5 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400&display=swap");
 @import url("https://cdn.jsdelivr.net/npm/cooltipz-css@1.7.1/cooltipz.min.css");
+:root {
+  --cooltipz-text-color: #ffd65c;
+}
+
 html {
   font-size: 100%;
 }
@@ -494,6 +498,7 @@ p.space-bottom {
       grid-template-columns: 1fr 75px;
   -ms-grid-rows: 1fr;
       grid-template-rows: 1fr;
+  margin-bottom: 0.625rem;
 }
 
 .hero .sideline-2 .avatar-wrapper p {
@@ -534,6 +539,7 @@ p.space-bottom {
   grid-column: 1;
   -ms-grid-row: 3;
   grid-row: 3;
+  background: url("../../assets/images/quote.png") no-repeat 50% 20%;
 }
 
 .hero__quotes .heading-20 {
@@ -615,6 +621,8 @@ p.space-bottom {
 .hero__css-corner-wrapper .info-1 {
   -ms-grid-column: 1;
   grid-column: 1;
+  background: url("../../assets/images/left-bracket.png") no-repeat left center;
+  background-size: 50px;
 }
 
 .hero__css-corner-wrapper .info-2 {
@@ -630,6 +638,8 @@ p.space-bottom {
 .hero__css-corner-wrapper .info-4 {
   -ms-grid-column: 4;
   grid-column: 4;
+  background: url("../../assets/images/right-bracket.png") no-repeat right center;
+  background-size: 50px;
 }
 
 @-webkit-keyframes progressBarGrow {
