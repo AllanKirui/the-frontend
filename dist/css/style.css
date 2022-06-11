@@ -978,6 +978,7 @@ p.space-bottom {
     grid-column: 1;
     -ms-grid-row: 1;
     grid-row: 1;
+    background-size: contain;
   }
   .hero__css-corner-wrapper .info-2 {
     margin-bottom: 0.625rem;
@@ -997,6 +998,7 @@ p.space-bottom {
     grid-column: 2;
     -ms-grid-row: 2;
     grid-row: 2;
+    background-size: contain;
   }
 }
 
@@ -1012,7 +1014,6 @@ p.space-bottom {
     grid-column: 1;
     -ms-grid-row: 1;
     grid-row: 1;
-    background-size: contain;
   }
   .hero__css-corner-wrapper .info-2 {
     -ms-grid-column: 1;
@@ -1031,7 +1032,6 @@ p.space-bottom {
     grid-column: 1;
     -ms-grid-row: 4;
     grid-row: 4;
-    background-size: contain;
   }
 }
 
