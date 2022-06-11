@@ -49,7 +49,7 @@ Screenshot of the **included** design file.
 
 ### Links 🔗
 
-- Live Site URL: [The Frontend](https://allankirui.github.io/the-frontend-epaper/)
+- Live Site URL: [The Frontend](https://allankirui.github.io/the-frontend/)
 
 <br/>
 
