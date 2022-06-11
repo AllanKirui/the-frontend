@@ -11,7 +11,7 @@
   <body>
     <header class="header">
       <div class="container wrapper">
-        <div class="wrapper__image">
+        <div class="wrapper__image hide-for-small">
           <img
             class="map-with-flag"
             src="./assets/images/map-with-flag.min.svg"
@@ -54,6 +54,13 @@
         <div class="intro__text">
           <div class="intro__text-title">
             <h1>Vue.js - A framework to love</h1>
+            <img
+              class="hide-for-large"
+              src="./assets/images/vue-logo-small.min.svg"
+              alt="Vue.js framework logo"
+              width="180"
+              height="156"
+            />
           </div>
           <span class="divider"></span>
           <div class="intro__text-marquee">
@@ -73,7 +80,7 @@
             </p>
           </div>
         </div>
-        <div class="intro__logo">
+        <div class="intro__logo hide-for-small">
           <img
             src="./assets/images/vue-logo.min.svg"
             alt="Vue.js framework logo"
@@ -478,51 +485,59 @@
 
         <div class="footer__podcast flex flex-fd-c">
           <h2 class="heading-20 underlined">Podcasts To Know</h2>
-          <div class="footer__podcast-1 flex flex-ai-c">
-            <div class="footer__podcast-number">1</div>
-            <div class="footer__podcast-info">
-              <p>CodeNewbie</p>
-              <!-- learn more link -->
-              <a
-                href="https://www.codenewbie.org/podcast"
-                target="_blank"
-                class="link"
-              >
-                <div id="link-container" class="link-container flex flex-ai-c">
-                  <span class="link-text">Learn more</span>
-                  <div class="link-icon-wrapper">
-                    <span class="chevron-wrapper flex flex-ai-c">
-                      <span class="chevron-body flex">
-                        <span class="chevron-head"></span>
+          <div class="podcast-wrapper">
+            <div class="footer__podcast-1 flex flex-ai-c">
+              <div class="footer__podcast-number">1</div>
+              <div class="footer__podcast-info">
+                <p>CodeNewbie</p>
+                <!-- learn more link -->
+                <a
+                  href="https://www.codenewbie.org/podcast"
+                  target="_blank"
+                  class="link"
+                >
+                  <div
+                    id="link-container"
+                    class="link-container flex flex-ai-c"
+                  >
+                    <span class="link-text">Learn more</span>
+                    <div class="link-icon-wrapper">
+                      <span class="chevron-wrapper flex flex-ai-c">
+                        <span class="chevron-body flex">
+                          <span class="chevron-head"></span>
+                        </span>
                       </span>
-                    </span>
+                    </div>
                   </div>
-                </div>
-              </a>
+                </a>
+              </div>
             </div>
-          </div>
 
-          <div class="footer__podcast-2 flex flex-ai-c">
-            <div class="footer__podcast-number">2</div>
-            <div class="footer__podcast-info">
-              <p>The CSS Podcast</p>
-              <!-- learn more link -->
-              <a
-                href="https://thecsspodcast.libsyn.com/"
-                target="_blank"
-                class="link"
-              >
-                <div id="link-container" class="link-container flex flex-ai-c">
-                  <span class="link-text">Learn more</span>
-                  <div class="link-icon-wrapper">
-                    <span class="chevron-wrapper flex flex-ai-c">
-                      <span class="chevron-body flex">
-                        <span class="chevron-head"></span>
+            <div class="footer__podcast-2 flex flex-ai-c">
+              <div class="footer__podcast-number">2</div>
+              <div class="footer__podcast-info">
+                <p>The CSS Podcast</p>
+                <!-- learn more link -->
+                <a
+                  href="https://thecsspodcast.libsyn.com/"
+                  target="_blank"
+                  class="link"
+                >
+                  <div
+                    id="link-container"
+                    class="link-container flex flex-ai-c"
+                  >
+                    <span class="link-text">Learn more</span>
+                    <div class="link-icon-wrapper">
+                      <span class="chevron-wrapper flex flex-ai-c">
+                        <span class="chevron-body flex">
+                          <span class="chevron-head"></span>
+                        </span>
                       </span>
-                    </span>
+                    </div>
                   </div>
-                </div>
-              </a>
+                </a>
+              </div>
             </div>
           </div>
         </div>
