@@ -309,6 +309,7 @@
           margin-bottom: toRem(10);
           grid-column: 1;
           grid-row: 1;
+          background-size: contain;
         }
 
         & .info-2 {
@@ -325,6 +326,7 @@
         & .info-4 {
           grid-column: 2;
           grid-row: 2;
+          background-size: contain;
         }
       }
 
@@ -335,7 +337,6 @@
         & .info-1 {
           grid-column: 1;
           grid-row: 1;
-          background-size: contain;
         }
 
         & .info-2 {
@@ -351,7 +352,6 @@
         & .info-4 {
           grid-column: 1;
           grid-row: 4;
-          background-size: contain;
         }
       }
     }
