@@ -1,9 +1,9 @@
-@import "mixins";
-@import "variables";
-@import "functions";
-@import "globals";
+@import "./base/mixins";
+@import "./base/variables";
+@import "./base/functions";
+@import "./base/globals";
 
-@import "header";
-@import "intro";
-@import "hero";
-@import "footer";
+@import "./layout/header";
+@import "./layout/intro";
+@import "./layout/hero";
+@import "./layout/footer";
