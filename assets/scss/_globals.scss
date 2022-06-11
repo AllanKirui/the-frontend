@@ -22,6 +22,10 @@ body {
   background-color: $color-old-lace;
   color: $color-rich-black;
   overflow-x: hidden;
+
+  @include breakpoint-down(576px) {
+    padding: toRem(20) 0;
+  }
 }
 
 h1,
@@ -31,6 +35,10 @@ h4,
 p {
   margin: 0;
   line-height: 1;
+}
+
+h1 {
+  line-height: 1.1;
 }
 
 a,
@@ -46,6 +54,7 @@ ul {
 
 .container {
   max-width: toRem(1120);
+  padding: 0 toRem(10);
   margin: 0 auto;
 }
 
@@ -69,6 +78,18 @@ ul {
   }
 }
 
+.hide-for-large {
+  @include breakpoint-up(976px) {
+    display: none;
+  }
+}
+
+.hide-for-small {
+  @include breakpoint-down(976px) {
+    display: none;
+  }
+}
+
 // 18px, 20px heading
 .heading-18,
 .heading-20 {
@@ -78,11 +99,19 @@ ul {
 
 .heading-18 {
   font-size: toRem(18);
+
+  @include breakpoint-down(576px) {
+    font-size: toRem(16);
+  }
 }
 
 .heading-20 {
   text-align: center;
   font-size: toRem(20);
+
+  @include breakpoint-down(576px) {
+    font-size: toRem(18);
+  }
 }
 
 .heading-20.underlined {
