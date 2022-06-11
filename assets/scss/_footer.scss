@@ -9,11 +9,37 @@
     grid-template-rows: 1fr;
     gap: toRem(10);
     margin-bottom: toRem(16);
+
+    @include breakpoint-down(976px) {
+      grid-template-rows: repeat(2, auto);
+    }
+
+    @include breakpoint-down(768px) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    @include breakpoint-down(576px) {
+      grid-template-columns: 1fr;
+      grid-template-rows: repeat(4, auto);
+
+      & > div:not(:last-child) {
+        margin-bottom: 1rem;
+      }
+    }
   }
 
   &__motivation {
     grid-column: 1;
     grid-row: 1;
+
+    @include breakpoint-down(976px) {
+      grid-column: 1 / span 2;
+    }
+
+    @include breakpoint-down(768px) {
+      grid-column: 1;
+      grid-row: 2;
+    }
   }
 
   &__colors {
@@ -102,6 +128,19 @@
       width: fit-content;
       margin-top: toRem(30);
     }
+
+    @include breakpoint-down(976px) {
+      grid-column: 3 / span 3;
+    }
+
+    @include breakpoint-down(768px) {
+      margin-bottom: toRem(10);
+      grid-column: 1 / span 3;
+    }
+
+    @include breakpoint-down(576px) {
+      grid-column: 1;
+    }
   }
 
   &__podcast {
@@ -112,12 +151,67 @@
       margin-right: toRem(10);
       font-size: toRem(48);
       font-weight: bold;
+
+      @include breakpoint-down(576px) {
+        font-size: toRem(32);
+      }
+    }
+
+    @include breakpoint-down(976px) {
+      grid-column: 1 / span 2;
+      grid-row: 2;
+
+      & .podcast-wrapper {
+        display: flex;
+        justify-content: space-between;
+      }
+    }
+
+    @include breakpoint-down(768px) {
+      grid-column: 2;
+
+      & .podcast-wrapper {
+        margin: 0 auto;
+        flex-direction: column;
+        justify-content: unset;
+      }
+    }
+
+    @include breakpoint-down(576px) {
+      grid-column: 1;
+      grid-row: 3;
+
+      & .podcast-wrapper {
+        margin: 0;
+        flex-direction: row;
+        justify-content: space-evenly;
+      }
+    }
+
+    @include breakpoint-down(375px) {
+      & .podcast-wrapper {
+        justify-content: space-between;
+      }
     }
   }
 
   &__upcoming {
     grid-column: 5;
     grid-row: 1;
+
+    @include breakpoint-down(976px) {
+      grid-column: 3 / span 3;
+      grid-row: 2;
+    }
+
+    @include breakpoint-down(768px) {
+      grid-column: 3;
+    }
+
+    @include breakpoint-down(576px) {
+      grid-column: 1;
+      grid-row: 4;
+    }
   }
 
   &__author {

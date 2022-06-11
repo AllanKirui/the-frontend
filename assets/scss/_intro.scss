@@ -14,6 +14,32 @@
       font-size: toRem(32);
       text-transform: uppercase;
       width: 80%;
+
+      @include breakpoint-down(976px) {
+        width: 100%;
+        display: flex;
+        align-items: center;
+
+        & img {
+          width: 150px;
+          max-width: 100%;
+        }
+      }
+
+      @include breakpoint-down(576px) {
+        flex-direction: column-reverse;
+        padding: toRem(16);
+        font-size: toRem(24);
+        text-align: center;
+
+        h1 {
+          line-height: 1.2;
+        }
+
+        & img {
+          margin-bottom: 1rem;
+        }
+      }
     }
 
     & .divider {
@@ -24,6 +50,7 @@
     }
 
     &-marquee {
+      // start of marquee code
       position: relative;
       left: 18px;
       margin: toRem(20) 0 0;
@@ -33,7 +60,6 @@
       letter-spacing: 0.5px;
       overflow: hidden;
 
-      // start of marquee code (plus overflow above)
       & > * {
         position: absolute;
         white-space: nowrap;
@@ -43,6 +69,7 @@
       > *:hover {
         animation-play-state: paused;
       }
+
       // end of marquee code
 
       & .dot {
@@ -60,6 +87,15 @@
         &:hover {
           color: $color-medium-aquamarine;
         }
+      }
+
+      @include breakpoint-down(976px) {
+        width: 95%;
+      }
+
+      @include breakpoint-down(576px) {
+        left: 0;
+        width: 100%;
       }
     }
   }
